@@ -1,0 +1,11 @@
+env.sh
+out/*
+!out/.gitkeep
+*.cap
+*.exp
+*.jca
+*.class
+*.jar
+.idea/
+.vscode/
+.DS_Store
