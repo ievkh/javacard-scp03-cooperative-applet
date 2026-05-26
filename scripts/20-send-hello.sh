@@ -4,7 +4,9 @@ source "${1:-./env.sh}"
 
 HELLO_CAPDU="80F000000548656C6C6F"
 
-# Template for stock GPPro: connect to the applet under SSD and send a secure APDU.
+# Template only: adjust flags to your gp/gppro version.
+
+# Connect to applet under SSD.
 CMD=("$GP" \
   --key-enc "$SSD_KEY_ENC" \
   --key-mac "$SSD_KEY_MAC" \

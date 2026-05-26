@@ -62,10 +62,9 @@ out/jc<version>-<gp-version>/
 Typical SSD workflow:
 
 ```sh
-./scripts/10-create-ssd.sh
-./scripts/20-put-ssd-scp03-keys.sh
-./scripts/30-install-applet.sh
-./scripts/40-send-hello.sh
+./scripts/10-install.sh
+./scripts/20-send-hello.sh
+./scripts/30-remove.sh
 ```
 
 The scripts print the GPPro command before executing it. Review `env.sh` and
