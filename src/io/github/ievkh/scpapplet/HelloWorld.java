@@ -75,7 +75,8 @@ public final class HelloWorld extends Applet {
     //    so appending the SW here would leak a spurious extra status word into
     //    the response data (the cause of the "... 9000 9000" seen on the wire).
     //    Instead, send the plain data and let the JCRE append the SW.
-    if ((sc.getSecurityLevel() & SecureChannel.R_MAC) != 0) {
+    if ((sc.getSecurityLevel() &
+         (SecureChannel.R_MAC | SecureChannel.R_ENCRYPTION)) != 0) {
       Util.setShort(buf, (short)(ISO7816.OFFSET_CDATA + responseLen),
                     ISO7816.SW_NO_ERROR);
       responseLen =
